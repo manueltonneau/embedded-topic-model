@@ -161,7 +161,7 @@ class ETM(object):
     def _initialize_embeddings(
         self, 
         embeddings,
-        use_c_format_w2vec=False
+        use_c_format_w2vec=True
     ):
         vectors = embeddings if isinstance(embeddings, KeyedVectors) else {}
 
