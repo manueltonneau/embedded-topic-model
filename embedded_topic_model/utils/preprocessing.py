@@ -146,8 +146,8 @@ def create_etm_datasets(
     if debug_mode:
         print('Removing empty documents...')
 
-    docs_train = _remove_empty_documents(docs_train)
-    docs_test = _remove_empty_documents(docs_test)
+    # docs_train = _remove_empty_documents(docs_train)
+    # docs_test = _remove_empty_documents(docs_test)
     
     if debug_mode:
         print(
