@@ -148,6 +148,16 @@ def create_etm_datasets(
 
     docs_train = _remove_empty_documents(docs_train)
     docs_test = _remove_empty_documents(docs_test)
+    
+    if debug_mode:
+    print(
+        'Number of documents after removing empty (train_dataset): {} [this should be equal to {}]'.format(
+            len(docs_train),
+            train_dataset_size))
+    print(
+        'Number of documents after removing empty (test_dataset): {} [this should be equal to {}]'.format(
+            len(docs_test),
+            test_dataset_size))
 
     # Remove test documents with length=1
     docs_test = [doc for doc in docs_test if len(doc) > 1]
