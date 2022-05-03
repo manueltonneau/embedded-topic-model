@@ -79,8 +79,8 @@ def create_etm_datasets(
     vectorized_documents = vectorizer.fit_transform(dataset)
 
     documents_without_stop_words = [
-        [word for word in document.split()
-            if word not in vectorizer.stop_words_]
+        [word.lower().replace(' ', '') for word in document.replace('.', '').replace(',', '').split()
+         if word not in vectorizer.stop_words_]
         for document in dataset]
 
     signed_documents = vectorized_documents.sign()
